@@ -3,7 +3,7 @@
 x=$1
 y=$2
 
- 
+
  
 pi=`echo "4*a(1)" | bc -l`
 radx=`echo "$x*($pi/180)" | bc -l`
