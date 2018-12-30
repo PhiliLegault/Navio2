@@ -11,7 +11,7 @@ do
     y=$( printf "%.0f" $y )
     ./tanTest.sh $x $y >> bearing.log
     tail -n 1 bearing.log 
-    sleep 0.1
+    sleep 3
     
 done
 
