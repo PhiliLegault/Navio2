@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#switcvhed y and x values because of issue with rotation, check documentation to see which is which 
 y=$1
 x=$2
 echo "x value: $x"
@@ -8,9 +9,9 @@ echo "y value: $y"
 pi=`echo "4*a(1)" | bc -l`
 
 if [[ $y -gt 0 ]]; then 
-    degree=`echo "90-(a($x/$y)*(180/$pi))" | bc -l`
+    degree=`echo "(90-(a($x/$y)*(180/$pi)))*2" | bc -l`
 elif [[ $y -lt 0 ]]; then 
-    degree=`echo "270-(a($x/$y)*(180/$pi))" | bc -l`
+    degree=`echo "(270-(a($x/$y)*(180/$pi))*2)" | bc -l`
 elif [[ $y -eq 0 ]] && [[ $x -lt 0 ]]; then 
     degree="180"
 elif [[ $y -eq 0 ]] && [[ $x -gt 0 ]]; then 
