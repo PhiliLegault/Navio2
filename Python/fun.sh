@@ -3,8 +3,9 @@
 python AccelGyroMag.py -i lsm >> testData.log &
 
 while true 
-do  
-    tail testData.log
+do     
+    echo "new reading: "
+    tail -n 1 testData.log
     # test values from running original script not represented.
     # causes issue with chance of double values
     # tail -n 1 testData.log  > magLine.log
