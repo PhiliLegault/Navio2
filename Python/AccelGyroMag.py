@@ -80,7 +80,7 @@ while True:
 	# print "Temperature:   ", imu.temperature
 	# print "Magnetometer:  ", imu.magnetometer_data
 
-	# time.sleep(0.1)
+	time.sleep(0.1)
 
 	m9a, m9g, m9m = imu.getMotion9()
 
