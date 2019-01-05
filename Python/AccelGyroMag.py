@@ -85,6 +85,6 @@ while True:
 	m9a, m9g, m9m = imu.getMotion9()
 
 	
-	print " Mag:", "{:+7.3f}".format(m9m[0]), "{:+7.3f}".format(m9m[1]), "{:+7.3f}".format(m9m[2])
+	print "{:+7.3f}".format(m9m[0]), "{:+7.3f}".format(m9m[1])
 
 	time.sleep(0.5)
