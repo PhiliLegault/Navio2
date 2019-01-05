@@ -22,7 +22,7 @@ do
 
     # # ./tanTest.sh $x $y >> bearing.log
     # # tail -n 1 bearing.log 
-    sleep 1
+    sleep 0.5
     
 done
 
