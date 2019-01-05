@@ -4,6 +4,7 @@ python AccelGyroMag.py -i lsm >> testData.log &
 
 while true 
 do  
+    # test values from running original script not represented.
     # causes issue with chance of double values
     tail -n 2 testData.log  > magLine.log
     x=`awk '{print $10}' magLine.log | tr -d '+'`

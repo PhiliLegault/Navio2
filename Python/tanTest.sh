@@ -14,7 +14,7 @@ elif [[ $y -lt 0 ]]; then
     degree=`echo "(270-(a($x/$y)*(180/$pi))*2)" | bc -l`
 elif [[ $y -eq 0 ]] && [[ $x -lt 0 ]]; then 
     degree="180"
-elif [[ $y -eq 0 ]] && [[ $x -gt 0 ]]; then 
+elif [[ $y -eq 0 ]] && [[ $x -gt 0 ]]; then
     degree="0"
 else 
     echo "failed to get degree"
