@@ -1,11 +1,11 @@
 #!/bin/bash
-> testData.log
-python AccelGyroMag.py -i lsm >> testData.log &
+> testData.txt
+python AccelGyroMag.py -i lsm >> testData.txt &
 
 while true 
 do     
     echo "new reading: "
-    tail -n 1 testData.log
+    tail -n 1 testData.txt
     # test values from running original script not represented.
     # causes issue with chance of double values
     # tail -n 1 testData.log  > magLine.log
