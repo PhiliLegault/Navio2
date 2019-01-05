@@ -1,7 +1,6 @@
 #!/bin/bash
-
-python AccelGyroMag.py -i lsm 
-#> testData.log &
+> testData.log
+python AccelGyroMag.py -i lsm >> testData.log &
 
 # while true 
 # do  
