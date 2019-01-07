@@ -73,14 +73,14 @@ while True:
 	# imu.read_gyro()
 	# imu.read_acc()
 	# imu.read_temp()
-	# imu.read_mag()
+	imu.read_mag()
 
 	# print "Accelerometer: ", imu.accelerometer_data
 	# print "Gyroscope:     ", imu.gyroscope_data
 	# print "Temperature:   ", imu.temperature
-	# print "Magnetometer:  ", imu.magnetometer_data
+	print "Magnetometer:  ", imu.magnetometer_data
 
-	#time.sleep(0.1)
+	time.sleep(0.1)
 
 	m9a, m9g, m9m = imu.getMotion9()
 	print "x value:"
