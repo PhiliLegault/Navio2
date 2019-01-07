@@ -1,7 +1,9 @@
 #!/bin/bash
 > testData.txt
 python AccelGyroMag.py -i lsm >> testData.txt &
-
+echo "sleep for 10 seconds to start gathering data"
+sleep 10
+echo "done sleeping"
 while true 
 do     
     # get last x and y values 
