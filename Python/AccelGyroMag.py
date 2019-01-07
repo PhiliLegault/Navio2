@@ -74,7 +74,6 @@ while True:
 
 	m9u, m8g, m9m = imu.getMotion9()
 
-	print m9m[0]
-	print m9m[1]
+	print m9m[0], m9m[1]
 
 	time.sleep(0.5)
