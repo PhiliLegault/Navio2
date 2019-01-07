@@ -1,6 +1,6 @@
 #!/bin/bash
 > testData.txt
-python AccelGyroMag.py -i lsm >> testData.txt &
+python -u AccelGyroMag.py -i lsm >> testData.txt &
 
 while true 
 do     

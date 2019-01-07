@@ -82,14 +82,12 @@ while True:
 
 	time.sleep(0.1)
 
-	m9a, m9g, m9m = imu.getMotion9()
+	m9m = imu.getMotion9()
 	print "x value:"
 	print m9m[0]
 	print "y value:"
 	print m9m[1]
-
 	
-	
-	#print "{:+7.3f}".format(m9m[0]), "{:+7.3f}".format(m9m[1])
+	print "{:+7.3f}".format(m9m[0]), "{:+7.3f}".format(m9m[1])
 
-	time.sleep(3)
+	time.sleep(0.5)
