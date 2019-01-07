@@ -69,25 +69,12 @@ imu.initialize()
 time.sleep(1)
 
 while True:
-	# imu.read_all()
-	# imu.read_gyro()
-	# imu.read_acc()
-	# imu.read_temp()
-	imu.read_mag()
-
-	# print "Accelerometer: ", imu.accelerometer_data
-	# print "Gyroscope:     ", imu.gyroscope_data
-	# print "Temperature:   ", imu.temperature
-	print "Magnetometer:  ", imu.magnetometer_data
 
 	time.sleep(0.1)
 
-	m9m = imu.getMotion9()
-	print "x value:"
+	m9u, m8g, m9m = imu.getMotion9()
+
 	print m9m[0]
-	print "y value:"
 	print m9m[1]
-	
-	print "{:+7.3f}".format(m9m[0]), "{:+7.3f}".format(m9m[1])
 
 	time.sleep(0.5)

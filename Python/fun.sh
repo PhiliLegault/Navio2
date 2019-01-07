@@ -9,7 +9,7 @@ do
     echo `wc -l testData.txt`
     echo " "
     echo "file contents: "
-    tail testData.txt
+    tail -n 1 testData.txt
     # lenghtOfFile=`wc -l testData.txt | grep -Eo '[0-9]'`
     # sed "$lenghtOfFile q;d" testData.txt
     # sed "$(( $lenghtOfFile - 1 )) q;d" testData.txt
@@ -32,7 +32,7 @@ do
 
     # # ./tanTest.sh $x $y >> bearing.log
     # # tail -n 1 bearing.log 
-    sleep 3
+    sleep 1
     
 done
 
