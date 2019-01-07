@@ -7,9 +7,14 @@ echo "done sleeping"
 while true 
 do     
     # get last x and y values 
-    lenghtOfFile=`wc -l testData.txt | grep -Eo '[0-9]'`
-    sed "$lenghtOfFile q;d" testData.txt
-    sed "$(( $lenghtOfFile - 1 )) q;d" testData.txt
+    echo "length of file: "
+    echo `wc -l testData.txt`
+    echo " "
+    echo "file contents: "
+    tail testData.txt
+    # lenghtOfFile=`wc -l testData.txt | grep -Eo '[0-9]'`
+    # sed "$lenghtOfFile q;d" testData.txt
+    # sed "$(( $lenghtOfFile - 1 )) q;d" testData.txt
 
 
 
