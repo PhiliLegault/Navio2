@@ -4,8 +4,13 @@ python AccelGyroMag.py -i lsm >> testData.txt &
 
 while true 
 do     
-    echo "new reading: "
-    tail -n 1 testData.txt
+    # get last x and y values 
+    lenghtOfFile=`wc -l testData.txt | grep -Eo '[0-9]'`
+    sed "$lenghtOfFile q;d" testData.txt
+    sed "$(( $lenghtOfFile - 1 )) q;d" testData.txt
+
+
+
     # test values from running original script not represented.
     # causes issue with chance of double values
     # tail -n 1 testData.log  > magLine.log
@@ -22,7 +27,7 @@ do
 
     # # ./tanTest.sh $x $y >> bearing.log
     # # tail -n 1 bearing.log 
-    sleep 0.5
+    sleep 3
     
 done
 
