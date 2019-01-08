@@ -27,13 +27,13 @@ do
     
     pi=`echo "4*a(1)" | bc -l`
 
-    if [[ echo $y '>' 0 | bc -l ]]; then 
+    if [[ $(echo "$y > 0" | bc -l) ]]; then 
         degree=`echo "(90-(a($x/$y)*(180/$pi)))*2" | bc -l`
-    elif [[ $y -lt 0 ]]; then 
+    elif [[ $(echo "$y < 0" | bc -l) ]]; then 
         degree=`echo "(270-(a($x/$y)*(180/$pi))*2)" | bc -l`
-    elif [[ $y -eq 0 ]] && [[ $x -lt 0 ]]; then 
+    elif [[ $(echo "$y == 0" | bc -l) ]] && [[ $(echo "$x < 0" | bc -l) ]]; then 
         degree="180"
-    elif [[ $y -eq 0 ]] && [[ $x -gt 0 ]]; then
+    elif [[ $(echo "$y == 0" | bc -l) ]] && [[ $(echo "$x > 0" | bc -l) ]]; then
         degree="0"
     else 
         echo "failed to get degree"
