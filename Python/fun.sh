@@ -19,8 +19,8 @@ do
     # test values from running original script not represented.
     # causes issue with chance of double values
     tail -n 1 testData.txt  > magLine.log
-    x=`awk '{print $1}' magLine.log | tr -d '+'`
-    y=`awk '{print $2}' magLine.log`
+    y=`awk '{print $1}' magLine.log | tr -d '+'`
+    x=`awk '{print $2}' magLine.log`
     
     echo "x val for tan test: $x"
     echo "y val for tan test: $y"
@@ -28,9 +28,9 @@ do
     pi=`echo "4*a(1)" | bc -l`
 
     if [[ $(echo "$y > 0" | bc -l) ]]; then 
-        degree=`echo "(90-(a($x/$y)*(180/$pi)))*2" | bc -l`
+        degree=`echo "(90-(a($x/$y)*(180/$pi)))" | bc -l`
     elif [[ $(echo "$y < 0" | bc -l) ]]; then 
-        degree=`echo "(270-(a($x/$y)*(180/$pi))*2)" | bc -l`
+        degree=`echo "(270-(a($x/$y)*(180/$pi)))" | bc -l`
     elif [[ $(echo "$y == 0" | bc -l) ]] && [[ $(echo "$x < 0" | bc -l) ]]; then 
         degree="180"
     elif [[ $(echo "$y == 0" | bc -l) ]] && [[ $(echo "$x > 0" | bc -l) ]]; then
