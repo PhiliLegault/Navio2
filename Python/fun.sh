@@ -14,10 +14,10 @@ do
     
     pi=`echo "4*a(1)" | bc -l`
     degree=`awk "BEGIN {print atan2($y,$x);}"`
-    degree=`echo "(($degree * 180) / $pi)" | bc -l`
+    degree=`echo "(( $degree * 180 ) / $pi)" | bc -l`
 
     if [[ $(echo "$degree < 0" | bc -l) ]]; then
-        degree=$(( 360 + $degree ))
+        degree=`echo "( 360 + $degree )" | bc -l`
     fi
 
    
