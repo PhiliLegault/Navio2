@@ -18,12 +18,12 @@ do
 
     # test values from running original script not represented.
     # causes issue with chance of double values
-    # tail -n 1 testData.log  > magLine.log
-    # x=`awk '{print $1}' magLine.log | tr -d '+'`
-    # y=`awk '{print $2}' magLine.log`
+    tail -n 1 testData.log  > magLine.log
+    x=`awk '{print $1}' magLine.log | tr -d '+'`
+    y=`awk '{print $2}' magLine.log`
     
-    # echo $x
-    # echo $y
+    echo "x val for tan test: $x"
+    echo "y val fro tan test: $y"
     
     # #x=$( printf "%.0f" $x )
     # #y=$( printf "%.0f" $y )
