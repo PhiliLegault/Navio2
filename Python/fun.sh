@@ -23,11 +23,11 @@ do
     y=`awk '{print $2}' magLine.log`
     
     echo "x val for tan test: $x"
-    echo "y val fro tan test: $y"
+    echo "y val for tan test: $y"
     
     pi=`echo "4*a(1)" | bc -l`
 
-    if [[ $y -gt 0 ]]; then 
+    if [[ echo $y '>' 0 | bc -l ]]; then 
         degree=`echo "(90-(a($x/$y)*(180/$pi)))*2" | bc -l`
     elif [[ $y -lt 0 ]]; then 
         degree=`echo "(270-(a($x/$y)*(180/$pi))*2)" | bc -l`
