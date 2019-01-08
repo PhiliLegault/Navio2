@@ -18,6 +18,12 @@ do
     #degree=`echo "((a($y/$x) * 180) / $pi)" | bc -l`
 
 
+    if [[ $(echo "$degree < 0" | bc -l) ]]; then
+        degree=$(( 360 + $degree ))
+    fi
+
+   
+
 
     degree=$( printf "%.0f" $degree )
     echo "degree value: 00:$degree"
